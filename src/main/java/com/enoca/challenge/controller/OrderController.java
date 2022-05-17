@@ -27,7 +27,7 @@ public class OrderController {
     @Autowired
     private CustomerService customerService;
 
-    //save order api
+    //save order to a customer api
     @PostMapping("/customer/{customer_id}/saveOrder")
     public ResponseEntity<Response> saveOrder(@RequestBody Order order, @PathVariable long customer_id){
         Customer customer = customerService.getCustomerById(customer_id);
